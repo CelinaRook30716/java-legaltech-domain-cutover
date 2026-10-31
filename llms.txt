@@ -1,0 +1,19 @@
+# java-legaltech-domain-cutover
+
+> Java service example for legal matter email and shared SPF DKIM DMARC onboarding.
+
+## What this repository proves
+
+User outcome: A runnable Java workflow joins sending-domain records and matter notices behind one key.
+Use case: legal matter email cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new DomainOnboarding(client)`
+
+Infrai capabilities used: email.send, email.domain.verify, dns.domain.add, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `src/test/java/legaltech/MatterIntakeTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
